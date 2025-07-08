@@ -6,7 +6,7 @@ import os
 import numpy as np
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/predict_by_name": {"origins": "https://gingermusic.onrender.com"}})
 
 
 @app.route("/")
