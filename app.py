@@ -8,15 +8,6 @@ import numpy as np
 app = Flask(__name__)
 CORS(app)
 
-# Load the model and dataset
-model_path = os.path.join(os.path.dirname(__file__), "music_popularity_model.pkl")
-model = joblib.load(model_path)
-
-# Load the dataset
-data_path = os.path.join(os.path.dirname(__file__), "Spotify_data.csv")
-df = pd.read_csv(data_path)
-# Standardize column names
-df.columns = df.columns.str.strip().str.lower()
 
 @app.route("/")
 def home():
@@ -24,6 +15,12 @@ def home():
 
 @app.route("/predict_by_name", methods=["POST"])
 def predict_by_name():
+    model_path = os.path.join(os.path.dirname(__file__), "music_popularity_model.pkl")
+    model = joblib.load(model_path)
+
+    data_path = os.path.join(os.path.dirname(__file__), "Spotify_data.csv")
+    df = pd.read_csv(data_path)
+    df.columns = df.columns.str.strip().str.lower()
     data = request.get_json()
     song_name = data.get("song_name", "").strip()
 
