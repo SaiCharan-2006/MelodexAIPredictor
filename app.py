@@ -18,6 +18,10 @@ df = pd.read_csv(data_path)
 # Standardize column names
 df.columns = df.columns.str.strip().str.lower()
 
+@app.route("/")
+def home():
+    return "🎧 Music Popularity Predictor API is running!"
+
 @app.route("/predict_by_name", methods=["POST"])
 def predict_by_name():
     data = request.get_json()
