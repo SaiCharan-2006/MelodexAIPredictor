@@ -13,7 +13,7 @@ model_path = os.path.join(os.path.dirname(__file__), "music_popularity_model.pkl
 model = joblib.load(model_path)
 
 # Load the dataset
-data_path = os.path.join(os.path.dirname(__file__), "spotify_data.csv")
+data_path = os.path.join(os.path.dirname(__file__), "Spotify_data.csv")
 df = pd.read_csv(data_path)
 # Standardize column names
 df.columns = df.columns.str.strip().str.lower()
