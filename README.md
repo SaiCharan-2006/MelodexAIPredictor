@@ -1,7 +1,7 @@
-# GingerAI 🍿  
+# MelodexAIPredictor 🍿  
 **An AI-Powered Music Popularity and Hybrid Recommendation System**
 
-GingerAI is an intelligent system designed to analyze music trends and provide personalized song recommendations. It leverages Spotify's dataset and combines popularity prediction with hybrid recommendation techniques to offer a seamless and tailored music discovery experience.
+MelodexAIPredictor is an intelligent system designed to analyze music trends and provide personalized song recommendations. It leverages Spotify's dataset and combines popularity prediction with hybrid recommendation techniques to offer a seamless and tailored music discovery experience.
 
 ## 🚀 Features
 - 🎵 Predict song popularity using machine learning models  
